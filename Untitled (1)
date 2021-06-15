@@ -1,0 +1,38 @@
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+SuSE patching steps:
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+ 
+
+Pre patch
+
+echo `date` > OS_upgrade.log
+echo -e "\n\nuname -a results\n" >> OS_upgrade.log
+uname -a >> OS_upgrade.log
+echo -e "\n\nifconfig -a results\n" >> OS_upgrade.log
+ifconfig -a >> OS_upgrade.log
+echo -e "\n\netc/hosts result\n" >> OS_upgrade.log
+cat /etc/hosts >> OS_upgrade.log
+echo -e "\n\netc/fstab results\n" >> OS_upgrade.log
+cat /etc/fstab >> OS_upgrade.log
+echo -e "\n\ndf -h results\n" >> OS_upgrade.log
+df -h >> OS_upgrade.log
+echo -e "\n\netc/yum.conf results\n" >> OS_upgrade.log
+cat /etc/yum.conf >> OS_upgrade.log
+echo -e "\n\netc/grub.conf results\n" >> OS_upgrade.log
+cat /etc/grub.conf >> OS_upgrade.log
+echo -e "\n\netc/sysctl.conf results\n" >> OS_upgrade.log
+cat /etc/sysctl.conf >> OS_upgrade.log
+echo -e "\n\nrpm results\n" >> OS_upgrade.log
+rpm -qa >> OS_upgrade.log
+echo -e "\n\nyum history\n" >> OS_upgrade.log
+#yum history >> OS_upgrade.log
+echo -e "\n\nexports\n" >> OS_upgrade.log
+cat /etc/exports >> OS_upgrade.log
+echo -e "\n\nexports\n" >> OS_upgrade.log
+#exportfs >> OS_upgrade.log
+mount >> OS_upgrade.log
+cat /etc/os-release >> OS_upgrade.log
+uname -a >> OS_upgrade.log
+#crm_mon -1Arf >> OS_upgrade.log
+lsblk >> OS_upgrade.log
+=====================================================
